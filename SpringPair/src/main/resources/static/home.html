@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Spring Boot</title>
+</head>
+<body>
+	<h1>Home.html</h1>
+	<button id="login">login</button>
+	<a href = "signup"><button id="signUp">signUp</button></a>
+	<button id="myPage">myPage</button>
+	<button id="detail">Detail</button>
+	<button id="list">List</button>
+	
+	
+	<script>
+	window.onload = function(){
+		document.querySelector("#login").onclick = function(){
+			console.log(login);
+			window.location.href = "login.html"; 
+		}
+		/* document.querySelector("#signUp").onclick = function(){
+			console.log(login);
+			window.location.href = "signUp.html"; 
+		} */
+		document.querySelector("#myPage").onclick = function(){
+			console.log(login);
+			window.location.href = "myPage.html"; 
+		}
+		document.querySelector("#detail").onclick = function(){
+			console.log(login);
+			window.location.href = "destinationDetail.html"; 
+		}
+		document.querySelector("#list").onclick = function(){
+			console.log(login);
+			window.location.href = "destinationList.html"; 
+		}
+	}
+	</script>
+</body>
+</html>
