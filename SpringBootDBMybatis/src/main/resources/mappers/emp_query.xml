@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mycom.mybatis.dao.EmpDao">
+	<select id="empDetail" parameterType="int" resultType="com.mycom.mybatis.dto.EmpDto">
+		select employeeId, first_name, last_name, email, hiredate
+		from emp where employeeId = #{employeeId}
+	</select>
+	
+	<!-- return이 Collections 이면 Dto만 기술 -> 리턴타입에 List 안와도 됨 -->
+	<select id="empList" resultType="com.mycom.mybatis.dto.EmpDto">
+		select employeeId, first_name, last_name, email, hiredate
+		from emp
+	</select>
+	
+	<!-- return이 primitive 타입 이면 별도로 기술할 필요가 없다. (int) -->
+	<insert id="empInsert" parameterType="com.mycom.mybatis.dto.EmpDto">
+		insert into emp (employeeId, first_name, last_name, email, hiredate)
+		values(#{employeeId},#{firstName},#{lastName},#{email},#{hireDate})
+	</insert>
+	
+	<update id="empUpdate" parameterType="com.mycom.mybatis.dto.EmpDto">
+		update emp set first_name=#{firstName}, last_name=#{lastName}, email=#{email}, hiredate=#{hireDate}
+		where employeeId = #{employeeId}
+	</update>
+	
+	<delete id="empDelete" parameterType="int">
+		delete from emp where employeeId = #{employeeId}
+	</delete>
+	
+	
+</mapper>

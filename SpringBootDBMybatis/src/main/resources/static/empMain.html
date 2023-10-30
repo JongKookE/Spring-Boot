@@ -13,11 +13,11 @@
 	<button id="btnEmpDelete">Emp 삭제</button>
 	
 	<button id="btnEmpInsertJSON">Emp 등록 JSON</button>
-	
 	<script>
 		window.onload = function(){
 			document.querySelector("#btnEmpDetail").onclick = async function(){
 				// 비동기 요청
+				
 				try{
 					let response = await fetch('/empDetail/2');
 					let data = await response.json();
@@ -25,8 +25,10 @@
 					console.log(data);
 				}catch(error){
 					console.error(error);
-				}			
-			}			
+				}
+				
+			}
+			
 			document.querySelector("#btnEmpList").onclick = async function(){
 				// 비동기 요청
 				
@@ -46,7 +48,7 @@
 				// post로 전송할 데이터 준비
 				// post 전송 www-urlencoded
 				let urlParams = new URLSearchParams({
-					employeeId : 4,
+					employeeId : 8,
 					firstName : '길동',
 					lastName : '사',
 					email : 'sa@gildong.com',
@@ -75,12 +77,12 @@
 				email : 'sa@gildong.com',
 				hireDate : '2013-04-04'
 			}
-			
 			document.querySelector("#btnEmpUpdate").onclick = async function(){
 				// 비동기 요청
 				// post로 전송할 데이터 준비
 				// post 전송 www-urlencoded
-				try{					
+				try{
+					
 					let fetchOptions = {
 						method:'POST',
 						body: new URLSearchParams(empUpdateData)
@@ -91,9 +93,11 @@
 					console.log(data);
 				}catch(error){
 					console.error(error);
-				}				
+				}
+				
 			}
-						
+			
+			
 			document.querySelector("#btnEmpDelete").onclick = async function(){
 				// 비동기 요청
 				// post로 전송할 데이터 준비
@@ -103,14 +107,17 @@
 					let fetchOptions = {
 						method:'DELETE',
 					}
-					let response = await fetch('/empDelete/4', fetchOptions);
+					let response = await fetch('/empDelete/8', fetchOptions);
 					let data = await response.json();
 					// data로 이후 비동기 처리 결과
 					console.log(data);
 				}catch(error){
 					console.error(error);
-				}				
-			}					
+				}
+				
+			}
+			
+			
 			let empInsertData = {
 				employeeId : 9,
 				firstName : '길동',
@@ -122,8 +129,10 @@
 			document.querySelector("#btnEmpInsertJSON").onclick = async function(){
 				// 비동기 요청
 				// post로 전송할 데이터 준비
-				// post 전송 www-urlencoded				
-				try{					
+				// post 전송 www-urlencoded
+				
+				try{
+					
 					let fetchOptions = {
 						method :'POST',
 						headers : {
@@ -141,7 +150,9 @@
 				
 			}
 			
-		}			
+		}
+		
+		
 	</script>
 </body>
 </html>
