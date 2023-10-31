@@ -4,11 +4,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,20 +27,20 @@ public class EmpController {
 	}
 
 	// 사원 상세
-	@GetMapping("/empDetail/{employeeId}")
+	@GetMapping("/emps/{employeeId}")
 	public EmpDto empDetail(@PathVariable int employeeId) {
 		System.out.println("사원 아이디는? : " + employeeId);
 		return empService.empDetail(employeeId);
 	}
 	
 	// 사원 리스트
-	@GetMapping("/empList")
+	@GetMapping("/emps")
 	public List<EmpDto> empList() {
 		return empService.empList();
 	}
 	
 	// 등록
-	@PostMapping("/empInsert")
+	@PostMapping("/emps")
 	public Map<String, String> empRegister(EmpDto dto) {
 		Map<String, String> map = new HashMap<>(); 
 				
@@ -51,7 +51,7 @@ public class EmpController {
 	}
 	
 	// 삭제
-	@DeleteMapping("/empDelete/{employeeId}")
+	@DeleteMapping("/emps/{employeeId}")
 	public Map<String, String> empDelete(@PathVariable int employeeId) {
 		Map<String, String> map = new HashMap<>(); 
 		int ret = empService.empDelete(employeeId);
@@ -61,24 +61,13 @@ public class EmpController {
 	}
 	
 	// 수정
-	@PostMapping("/empUpdate")
-	public Map<String, String> empUpdate(EmpDto dto) {
+	@PutMapping("/emps/{employeeId}")
+	public Map<String, String> empUpdate(@PathVariable int employeeId, EmpDto dto) {
 		
 		Map<String, String> map = new HashMap<>(); 
 		int ret = empService.empUpdate(dto);
 		if( ret == 1 ) map.put("result", "success");
 		else map.put("result", "fail");
 		return map;
-	}
-	
-	// 사원 등록 JSON
-	@PostMapping("/empInsertJSON")
-	public Map<String, String> empRegisterJSON(@RequestBody EmpDto dto) {
-		Map<String, String> map = new HashMap<>(); 
-		int ret = empService.empInsert(dto);
-		if( ret == 1 ) map.put("result", "success");
-		else map.put("result", "fail");
-		return map;
-	}
-	
+	}		
 }
