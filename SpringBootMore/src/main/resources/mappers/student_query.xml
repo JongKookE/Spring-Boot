@@ -3,13 +3,13 @@
 <!DOCTYPE mapper PUBLIC "-//more.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mycom.more.dao.StudentDao">
 	<select id="detail" parameterType="int" resultType="com.mycom.more.dto.StudentDto">
-		select student_id, student_nm, email, phone
+		select student_id, student_nm, email, phone, views
 		from student where student_id = #{studentId}
 	</select>
 	
 	<!-- return이 Collections 이면 Dto만 기술 -> 리턴타입에 List 안와도 됨 -->
 	<select id="list" resultType="com.mycom.more.dto.StudentDto">
-		select student_id,student_nm, email, phone
+		select student_id,student_nm, email, phone, views
 		from student
 	</select>
 	
@@ -29,7 +29,10 @@
 	</delete>
 	
 	<select id="sort" resultType="com.mycom.more.dto.StudentDto">
-		select student_id, student_nm, email, phone from student order by student_id desc;
+		select student_id, student_nm, email, phone, views from student order by views desc;
 	</select>
-	
+
+	<update id="randomViewsGenerator"  parameterType="int">
+		update student set views = #{views};
+	</update>
 </mapper>

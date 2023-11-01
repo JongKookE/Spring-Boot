@@ -16,4 +16,5 @@ public class StudentDto {
 	private String studentNm;
 	private String email;
 	private String phone;
+	private int views;
 }

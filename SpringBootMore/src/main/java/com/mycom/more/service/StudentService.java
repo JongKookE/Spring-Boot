@@ -11,4 +11,5 @@ public interface StudentService {
 	int update(StudentDto dto);
 	int delete(int studentId);
 	List<StudentDto> sort();
+	int randomViewsGenerator(int views);
 }

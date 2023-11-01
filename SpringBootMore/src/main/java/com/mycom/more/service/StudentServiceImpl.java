@@ -28,15 +28,7 @@ public class StudentServiceImpl implements StudentService{
 	@Override
 	@Transactional
 	public int insert(StudentDto dto) {
-		try {
-			dao.insert(dto);
-			String str = null;
-			str.length();
-		} catch(Exception e) {
-			throw new RuntimeException();
-		} finally {
-			return dao.insert(dto);
-		}
+		return dao.insert(dto);
 	}
 
 	@Override
@@ -52,6 +44,13 @@ public class StudentServiceImpl implements StudentService{
 	@Override
 	public List<StudentDto> sort() {
 		return dao.sort();
+	}
+
+	@Override
+	public int randomViewsGenerator(int views) {
+		int randomValue =(int) (Math.random() * 100) + 1;
+		System.out.println(randomValue);
+		return dao.randomViewsGenerator(views);
 	}
 
 }

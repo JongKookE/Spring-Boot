@@ -1,0 +1,1 @@
+alter table student add column `views` int not null;

@@ -2,13 +2,9 @@ package com.mycom.more.controller;
 //존잘 종국
 import java.util.List;
 //존잘 종국
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 //존잘 종국
 import com.mycom.more.dto.StudentDto;
 import com.mycom.more.service.StudentService;
@@ -48,6 +44,11 @@ public class StudentController {
 	@GetMapping("/students/sort")
 	public List<StudentDto> sort() {
 		return service.sort();
+	}
+
+	@PutMapping("/students/generateViews/{views}")
+	public int randomViewsGenerator(@PathVariable int views){
+		return service.randomViewsGenerator(views);
 	}
 	
 	

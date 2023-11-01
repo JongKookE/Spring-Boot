@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    window.onload = function (){
+        sendData();
+    }
+    async function sendData(){
+        let myData = {
+            first: "1",
+            second: "22",
+            third: "333"
+        };
+        try{
+            let fetchOptions = {
+                method: "POST",
+                body : new URLSearchParams(myData)
+            }
+            let response = await fetch("/users", fetchOptions);
+            let data = response.json();
+            console.log(data);
+        }catch(error){
+            console.log(error);
+        }
+    }
+
+</script>
+</body>
+</html>

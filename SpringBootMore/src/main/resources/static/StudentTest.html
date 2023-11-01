@@ -9,7 +9,7 @@
 	<hr>
 	<table>
 		<thead>
-			<tr><td>StudentId</td><td>StudentNm</td><td>Email</td><td>Phone</td></tr>
+			<tr><td>StudentId</td><td>StudentNm</td><td>Email</td><td>Phone</td><td>Views</td></tr>
 		</thead>
 		<tbody id = "tbodyStudent"></tbody>
 	</table>
@@ -29,6 +29,7 @@
 		<button id="btnDelete">삭제</button>
 		<button id="btnClear">초기화</button>
 		<button id="btnSort">정렬</button>
+		<button id="btnGenerateViews">랜덤 조회수 생성기</button>
 	</div>
 	<!--  소스폴더 안에 로그 위치시키면 스프링 DB가 변화를 감지해서 리프레쉬를 하면서 또 로그가 업데이트 되는 무한루프가 발생한다 -->
 	<script>
@@ -43,6 +44,7 @@
 			document.querySelector("#btnDelete").onclick = deleteStudent;
 			document.querySelector("#btnClear").onclick = clear;
 			document.querySelector("#btnSort").onclick = sortStudent;
+			document.querySelector("#btnGenerateViews").onclick = randomGenerateViews;
 		}
 		
 		
@@ -63,7 +65,8 @@
 			console.log("실행되고있나");
 			let listHtml = ``;
 			list.forEach(el => {
-				listHtml += `<tr style="cursor:pointer;" data-studentId=${el.studentId}><td>${el.studentId}</td><td>${el.studentNm}</td><td>${el.email}</td><td>${el.phone}</td></tr>`
+				listHtml += `<tr style="cursor:pointer;" data-studentId=${el.studentId}><td>${el.studentId}</td>
+							<td>${el.studentNm}</td><td>${el.email}</td><td>${el.phone}</td><td>${el.views}</td></tr>`
 			});
 			document.querySelector("#tbodyStudent").innerHTML = listHtml;
 			makeListHtmlEventHandler();
@@ -177,6 +180,29 @@
 				console.error(error);
 			}				
 		 }
+
+		 async function randomGenerateViews(){
+			 console.log("randomGenerateViews")
+			 try{
+				 let fetchOptions = {
+					 method: "PUT",
+				 }
+				 let views = getRandomInt(1, 100);
+				 let response = await fetch(`/students/generateViews/${views}`, fetchOptions);
+				 let data = await response.json();
+				 await listStudent();
+				 console.log(data);
+			 } catch(error){
+				 console.log(error);
+			 }
+		 }
+
+		function getRandomInt(min, max) {
+			min = Math.ceil(min);
+			max = Math.floor(max);
+			return Math.floor(Math.random() * (max - min) + min); //최솟값을 포함하고, 최댓값은 포함하지 않음
+		}
+
 	</script>
 </body>
 </html>
