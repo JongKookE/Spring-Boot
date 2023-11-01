@@ -49,4 +49,9 @@ public class StudentServiceImpl implements StudentService{
 		return dao.delete(studentId);
 	}
 
+	@Override
+	public List<StudentDto> sort() {
+		return dao.sort();
+	}
+
 }

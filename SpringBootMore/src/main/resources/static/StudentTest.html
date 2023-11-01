@@ -28,6 +28,7 @@
 		<button id="btnUpdate">수정</button>
 		<button id="btnDelete">삭제</button>
 		<button id="btnClear">초기화</button>
+		<button id="btnSort">정렬</button>
 	</div>
 	<!--  소스폴더 안에 로그 위치시키면 스프링 DB가 변화를 감지해서 리프레쉬를 하면서 또 로그가 업데이트 되는 무한루프가 발생한다 -->
 	<script>
@@ -41,6 +42,7 @@
 			document.querySelector("#btnUpdate").onclick = updateStudent;
 			document.querySelector("#btnDelete").onclick = deleteStudent;
 			document.querySelector("#btnClear").onclick = clear;
+			document.querySelector("#btnSort").onclick = sortStudent;
 		}
 		
 		
@@ -58,6 +60,7 @@
 		}
 		
 		function makeListHtml(list){
+			console.log("실행되고있나");
 			let listHtml = ``;
 			list.forEach(el => {
 				listHtml += `<tr style="cursor:pointer;" data-studentId=${el.studentId}><td>${el.studentId}</td><td>${el.studentNm}</td><td>${el.email}</td><td>${el.phone}</td></tr>`
@@ -110,7 +113,7 @@
 			
 			let fetchOptions = {
 					method: "POST", 
-					body: new URLSearchParams(student) /// www.urlencoded 하지만 파일 업로드를 할때는 form-data를 이용해야한다.
+					body: new URLSearchParams(student) // www.urlencoded 하지만 파일 업로드를 할때는 form-data를 이용해야한다.
 					
 			};
 			try{
@@ -132,8 +135,7 @@
 				
 				let fetchOptions = {
 						method: "PUT", 
-						body: new URLSearchParams(student) /// www.urlencoded 하지만 파일 업로드를 할때는 form-data를 이용해야한다.
-						
+						body: new URLSearchParams(student) 
 				};
 				try{
 					let response = await fetch(`/students/${CURRENT_ID}`, fetchOptions);
@@ -159,6 +161,22 @@
 					console.log(error);
 				}
 			}
+		 
+		 async function sortStudent(){
+			 console.log("sortStudent()");
+			 let fetchOptions = {
+					 method: "GET"
+			 }
+			 try{
+				 let response = await fetch(`/students/sort`, fetchOptions);
+				 let data = await response.json();				 
+				 makeListHtml(data);
+				console.log(data);
+				clear();
+			 } catch(error){
+				console.error(error);
+			}				
+		 }
 	</script>
 </body>
 </html>

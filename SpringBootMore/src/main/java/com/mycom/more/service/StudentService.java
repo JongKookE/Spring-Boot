@@ -10,4 +10,5 @@ public interface StudentService {
 	int insert(StudentDto dto);
 	int update(StudentDto dto);
 	int delete(int studentId);
+	List<StudentDto> sort();
 }

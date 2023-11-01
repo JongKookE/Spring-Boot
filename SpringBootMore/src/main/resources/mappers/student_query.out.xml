@@ -28,8 +28,10 @@
 		delete from student where student_id = #{studentId}
 	</delete>
 	
-	<select id="sort" resultType="com.mycom.more.dto.StudentDto">
-		select student_id, student_nm, email, phone from student order by student_id desc;
+ 	<select id = "sort" resultType="com.mycom.more.dto.StudentDto">
+ 		select student_id,student_nm, email, phone 
+ 		from student 
+ 		order by student_id desc;
 	</select>
 	
 </mapper>

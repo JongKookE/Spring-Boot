@@ -43,5 +43,12 @@ public class StudentController {
 	public int delete(@PathVariable int studentId) {
 		return service.delete(studentId);
 	}
+	
 	// 존잘 종국
+	@GetMapping("/students/sort")
+	public List<StudentDto> sort() {
+		return service.sort();
+	}
+	
+	
 }
