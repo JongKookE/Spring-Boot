@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,7 @@ import com.mycom.mybatis.service.EmpService;
 
 // 사원 관리
 @RestController
+@CrossOrigin(origins="*", allowedHeaders = "*")
 public class EmpController {
 
 	EmpService empService;
