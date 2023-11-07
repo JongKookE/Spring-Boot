@@ -1,208 +1,193 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="UTF-8" />
+	<title>Insert title here</title>
 </head>
 <body>
+<div id="app">
 	<h1>Student 관리</h1>
-	<hr>
+	<hr />
 	<table>
 		<thead>
-			<tr><td>StudentId</td><td>StudentNm</td><td>Email</td><td>Phone</td><td>Views</td></tr>
+		<tr>
+			<td>StudentId</td>
+			<td>StudentNm</td>
+			<td>Email</td>
+			<td>Phone</td>
+			<td>Views</td>
+		</tr>
 		</thead>
-		<tbody id = "tbodyStudent"></tbody>
-	</table>
-	
-	<hr>
-	<table>
 		<tbody>
-			<tr><td>StudentNm</td><td><input type="text" name="studentNm" id="inputStudentNm"></td></tr>
-			<tr><td>Email</td><td><input type="text" name="email" id = "inputEmail"></td></tr>
-			<tr><td>Phone</td><td><input type="text" name="phone" id = "inputPhone"></td></tr>
+		<tr
+				v-for="(student, index) in studentList"
+				:key="index"
+				@click="detail(student.studentId)"
+		>
+			<td>{{student.studentId}}</td>
+			<td>{{student.studentNm}}</td>
+			<td>{{student.email}}</td>
+			<td>{{student.phone}}</td>
+			<td>{{student.views}}</td>
+		</tr>
 		</tbody>
 	</table>
-	
-	<div style="border: 1px; margin:auto; text-align:center;">
-		<button id="btnInsert">등록</button>
-		<button id="btnUpdate">수정</button>
-		<button id="btnDelete">삭제</button>
-		<button id="btnClear">초기화</button>
-		<button id="btnSort">정렬</button>
-		<button id="btnGenerateViews">랜덤 조회수 생성기</button>
+	<hr />
+	<table>
+		<tbody>
+		<tr>
+			<td>StudentNm</td>
+			<td><input  v-model="detailData.studentNm" required/></td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td><input v-model="detailData.email" required/></td>
+		</tr>
+		<tr>
+			<td>Phone</td>
+			<td><input v-model="detailData.phone" required/></td>
+		</tr>
+		</tbody>
+	</table>
+
+
+	<div style="border: 1px; margin: auto; text-align: center">
+		<button @click="insert()">등록</button>
+		<button @click="update()">수정</button>
+		<button @click="del()">삭제</button>
+		<button @click="clear()">초기화</button>
+		<button @click="sort()">정렬</button>
+		<button @click="generateViews()">랜덤 조회수 생성기</button>
 	</div>
-	<!--  소스폴더 안에 로그 위치시키면 스프링 DB가 변화를 감지해서 리프레쉬를 하면서 또 로그가 업데이트 되는 무한루프가 발생한다 -->
-	<script>
-		var CURRENT_ID; // 현재 조회되는 학생의 KEY
-		
-	
-		window.onload = function(){
-			listStudent();	
-			
-			document.querySelector("#btnInsert").onclick = insertStudent;
-			document.querySelector("#btnUpdate").onclick = updateStudent;
-			document.querySelector("#btnDelete").onclick = deleteStudent;
-			document.querySelector("#btnClear").onclick = clear;
-			document.querySelector("#btnSort").onclick = sortStudent;
-			document.querySelector("#btnGenerateViews").onclick = randomGenerateViews;
-		}
-		
-		
-		async function listStudent(){
-			try{
-				let response = await fetch('/students');
-				let data = await response.json();
-				// data로 이후 비동기 처리 결과
-				makeListHtml(data);
-				console.log(data);
-				clear();
-			}catch(error){
-				console.error(error);
-			}				
-		}
-		
-		function makeListHtml(list){
-			console.log("실행되고있나");
-			let listHtml = ``;
-			list.forEach(el => {
-				listHtml += `<tr style="cursor:pointer;" data-studentId=${el.studentId}><td>${el.studentId}</td>
-							<td>${el.studentNm}</td><td>${el.email}</td><td>${el.phone}</td><td>${el.views}</td></tr>`
-			});
-			document.querySelector("#tbodyStudent").innerHTML = listHtml;
-			makeListHtmlEventHandler();
-		}
-		
-		function makeListHtmlEventHandler(){
-			document.querySelectorAll("#tbodyStudent tr").forEach(el => {
-				el.onclick = function(){
-					let studentId = this.getAttribute("data-studentId");
-					detailStudent(studentId);
-				}
-			})
-		}
-		
-		async function detailStudent(studentId){
-			let url = `students/${studentId}`;
-			try{
-				let response = await fetch(url);
-				let data = await response.json();
-				console.log(data);
-				makeDetailHtml(data);
-			} catch(error){
-				console.log(error);
-			}
-		}
-		
-		function makeDetailHtml(detail){
-			CURRENT_ID = detail.studentId;
-			document.querySelector("#inputStudentNm").value = detail.studentNm;
-			document.querySelector("#inputEmail").value = detail.email;
-			document.querySelector("#inputPhone").value = detail.phone;
-		}
-		
-		
-		function clear(){
-			document.querySelector("#inputStudentNm").value = "";
-			document.querySelector("#inputEmail").value = "";
-			document.querySelector("#inputPhone").value = "";
-		}
+</div>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+	const { createApp, ref } = Vue;
+	const app = createApp({
+		setup() {
+			const studentList = ref([]);
+			const detailData = ref({});
 
-		 async function insertStudent(){			
-			let student = {
-				studentNm: document.querySelector("#inputStudentNm").value,
-				email: document.querySelector("#inputEmail").value,
-				phone: document.querySelector("#inputPhone").value,
-			};
-			
-			let fetchOptions = {
-					method: "POST", 
-					body: new URLSearchParams(student) // www.urlencoded 하지만 파일 업로드를 할때는 form-data를 이용해야한다.
-					
-			};
-			try{
-				let response = await fetch("/students", fetchOptions);
-				let data = await response.json();
-				console.log(data);
-				listStudent();
-			} catch(error){
-				console.log(error);
-			}
-		} 
-		 async function updateStudent(){			
-				let student = {
-					studentId: CURRENT_ID,
-					studentNm: document.querySelector("#inputStudentNm").value,
-					email: document.querySelector("#inputEmail").value,
-					phone: document.querySelector("#inputPhone").value,
-				};
-				
-				let fetchOptions = {
-						method: "PUT", 
-						body: new URLSearchParams(student) 
-				};
-				try{
-					let response = await fetch(`/students/${CURRENT_ID}`, fetchOptions);
+			const list = async () => {
+				try {
+					let response = await fetch(
+							"students"
+					);
 					let data = await response.json();
-					console.log(data);
-					listStudent();
+					studentList.value = data;
+					// data로 이후 비동기 처리 결과
+				} catch (error) {
+					console.error(error);
+				}
+			};
+			// Arrow Function은 this를 지정 못함!
+			const detail =  async function (studentId) {
+				try{
+					let response = await fetch("/students/" + studentId);
+					let data = await response.json();
+
+					detailData.value = data;
+					console.log(detailData.value.studentId);
 				} catch(error){
 					console.log(error);
-				}
-			}
-		 
-		 async function deleteStudent(){			
-				
+				};
+			};
+
+			const insert = async function(){
 				let fetchOptions = {
-						method: "DELETE" 												
+					method:"POST",
+					body: new URLSearchParams(detailData.value)
 				};
 				try{
-					let response = await fetch(`/students/${CURRENT_ID}`, fetchOptions);
+					let response = await fetch("/students", fetchOptions)
 					let data = await response.json();
-					console.log(data);
-					listStudent();
+					console.log(detailData.value.studentId);
+					console.log("insert()")
+					list();
+				}catch(error){
+					console.log(error);
+				};
+			};
+
+			const update = async function(){
+				let fetchOptions = {
+					method:"PUT",
+					body: new URLSearchParams(detailData.value)
+				};
+				try{
+					let response = await fetch("/students/"+detailData.value.studentId, fetchOptions)
+					let data = await response.json();
+					console.log("update")
+					list();
+				}catch(error){
+					console.log(error);
+				};
+			}
+
+			const del = async function(){
+				let fetchOptions = {
+					method:"delete",
+				};
+				try{
+					let response = await fetch("/students/"+detailData.value.studentId, fetchOptions)
+					let data = await response.json();
+					console.log("update")
+					list();
+				}catch(error){
+					console.log(error);
+				};
+			};
+
+			const clear = () => {
+				detailData.value = "";
+			};
+
+			const sort = async function(){
+				console.log("sort");
+				let fetchOptions = {method:"GET"}
+				try{
+					let response = await fetch("/students/sort", fetchOptions);
+					let data = await response.json();
+					studentList.value = data;
 				} catch(error){
 					console.log(error);
-				}
-			}
-		 
-		 async function sortStudent(){
-			 console.log("sortStudent()");
-			 let fetchOptions = {
-					 method: "GET"
-			 }
-			 try{
-				 let response = await fetch(`/students/sort`, fetchOptions);
-				 let data = await response.json();				 
-				 makeListHtml(data);
-				console.log(data);
-				clear();
-			 } catch(error){
-				console.error(error);
-			}				
-		 }
+				};
+			};
 
-		 async function randomGenerateViews(){
-			 console.log("randomGenerateViews")
-			 try{
-				 let fetchOptions = {
-					 method: "PUT",
-				 }
-				 let views = getRandomInt(1, 100);
-				 let response = await fetch(`/students/generateViews/${views}`, fetchOptions);
-				 let data = await response.json();
-				 await listStudent();
-				 console.log(data);
-			 } catch(error){
-				 console.log(error);
-			 }
-		 }
+			const generateViews = async function(){
+				let fetchOptions = {
+					method: "PUT",
 
-		function getRandomInt(min, max) {
-			min = Math.ceil(min);
-			max = Math.floor(max);
-			return Math.floor(Math.random() * (max - min) + min); //최솟값을 포함하고, 최댓값은 포함하지 않음
-		}
+				};
+				try{
+					let response = await fetch("/students/generateViews/"+getRandomInt(1,100), fetchOptions);
+					let data = await response.json();
+					list();
+				} catch(error){
+					console.log(error);
+				};
+			};
 
-	</script>
+			list();
+			return {
+				generateViews,
+				sort,
+				clear,
+				del,
+				update,
+				insert,
+				detail,
+				studentList,
+				detailData,
+			};
+		},
+	}).mount("#app");
+
+	function getRandomInt(min, max) {
+		min = Math.ceil(min);
+		max = Math.floor(max);
+		return Math.floor(Math.random() * (max - min) + min); //최솟값을 포함하고, 최댓값은 포함하지 않음
+	};
+</script>
 </body>
 </html>
