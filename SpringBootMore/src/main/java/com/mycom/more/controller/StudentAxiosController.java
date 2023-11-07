@@ -9,15 +9,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 
 import com.mycom.more.dto.StudentDto;
 import com.mycom.more.service.StudentService;
 
 @RestController
 @CrossOrigin(origins="*", allowedHeaders = "*")
-public class StudentController {
+@RequestMapping("/axios")
+public class StudentAxiosController {
 
 	@Autowired
 	StudentService service;
@@ -33,12 +35,12 @@ public class StudentController {
 	}
 
 	@PostMapping("/students")
-	public int insert(StudentDto dto) {
+	public int insert(@RequestBody StudentDto dto) {
 		return service.insert(dto);
 	}
 
 	@PutMapping("/students/{studentId}")
-	public int update(@PathVariable int studentId ,StudentDto dto) {
+	public int update(@PathVariable int studentId , @RequestBody StudentDto dto) {
 		return service.update(dto);
 	}
 
