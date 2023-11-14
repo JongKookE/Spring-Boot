@@ -7466,3 +7466,529 @@ java.sql.SQLSyntaxErrorException: Unknown column 'views' in 'field list'
  java.lang.Thread.run(Thread.java:748)
 2023-11-02 17:14:17.300  INFO 8084 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
 2023-11-02 17:14:17.305  INFO 8084 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+<<<<<<< Updated upstream
+=======
+2023-11-02 20:18:18.522  INFO 17988 --- [restartedMain] c.mycom.more.SpringBootMoreApplication   : Starting SpringBootMoreApplication using Java 1.8.0_392 on DESKTOP-PU71GCC with PID 17988 (C:\jongkookE\Spring-Boot\SpringBootMore\build\classes\java\main started by user in C:\jongkookE\Spring-Boot\SpringBootMore)
+2023-11-02 20:18:18.524  INFO 17988 --- [restartedMain] c.mycom.more.SpringBootMoreApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-11-02 20:18:18.581  INFO 17988 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-02 20:18:18.582  INFO 17988 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-02 20:18:19.778  INFO 17988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-02 20:18:19.787  INFO 17988 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-02 20:18:19.787  INFO 17988 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-02 20:18:19.860  INFO 17988 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-02 20:18:19.860  INFO 17988 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1278 ms
+2023-11-02 20:18:20.519  INFO 17988 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-02 20:18:20.550  INFO 17988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-02 20:18:20.559  INFO 17988 --- [restartedMain] c.mycom.more.SpringBootMoreApplication   : Started SpringBootMoreApplication in 2.442 seconds (JVM running for 3.243)
+2023-11-02 20:18:25.092  INFO 17988 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-02 20:18:25.092  INFO 17988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-02 20:18:25.093  INFO 17988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-02 20:18:32.431  INFO 17988 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-02 20:18:32.763  INFO 17988 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-02 20:18:32.771 DEBUG 17988 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 20:18:32.792 DEBUG 17988 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 20:18:32.811 DEBUG 17988 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 20:18:38.300 DEBUG 17988 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 20:18:38.301 DEBUG 17988 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 20:18:38.303 DEBUG 17988 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 20:18:39.759 DEBUG 17988 --- [http-nio-8080-exec-7] c.m.m.d.StudentDao.randomViewsGenerator  : ==>  Preparing: update student set views = ?;
+2023-11-02 20:18:39.760 DEBUG 17988 --- [http-nio-8080-exec-7] c.m.m.d.StudentDao.randomViewsGenerator  : ==> Parameters: 72(Integer)
+2023-11-02 20:18:39.771 DEBUG 17988 --- [http-nio-8080-exec-7] c.m.m.d.StudentDao.randomViewsGenerator  : <==    Updates: 5
+2023-11-02 20:18:39.776 DEBUG 17988 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 20:18:39.776 DEBUG 17988 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 20:18:39.778 DEBUG 17988 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 20:18:40.678 DEBUG 17988 --- [http-nio-8080-exec-9] c.m.m.d.StudentDao.randomViewsGenerator  : ==>  Preparing: update student set views = ?;
+2023-11-02 20:18:40.678 DEBUG 17988 --- [http-nio-8080-exec-9] c.m.m.d.StudentDao.randomViewsGenerator  : ==> Parameters: 17(Integer)
+2023-11-02 20:18:40.688 DEBUG 17988 --- [http-nio-8080-exec-9] c.m.m.d.StudentDao.randomViewsGenerator  : <==    Updates: 5
+2023-11-02 20:18:40.693 DEBUG 17988 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 20:18:40.693 DEBUG 17988 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 20:18:40.696 DEBUG 17988 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 20:18:41.129 DEBUG 17988 --- [http-nio-8080-exec-1] c.m.m.d.StudentDao.randomViewsGenerator  : ==>  Preparing: update student set views = ?;
+2023-11-02 20:18:41.129 DEBUG 17988 --- [http-nio-8080-exec-1] c.m.m.d.StudentDao.randomViewsGenerator  : ==> Parameters: 38(Integer)
+2023-11-02 20:18:41.140 DEBUG 17988 --- [http-nio-8080-exec-1] c.m.m.d.StudentDao.randomViewsGenerator  : <==    Updates: 5
+2023-11-02 20:18:41.147 DEBUG 17988 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 20:18:41.147 DEBUG 17988 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 20:18:41.150 DEBUG 17988 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 20:18:41.390 DEBUG 17988 --- [http-nio-8080-exec-3] c.m.m.d.StudentDao.randomViewsGenerator  : ==>  Preparing: update student set views = ?;
+2023-11-02 20:18:41.391 DEBUG 17988 --- [http-nio-8080-exec-3] c.m.m.d.StudentDao.randomViewsGenerator  : ==> Parameters: 43(Integer)
+2023-11-02 20:18:41.394 DEBUG 17988 --- [http-nio-8080-exec-3] c.m.m.d.StudentDao.randomViewsGenerator  : <==    Updates: 5
+2023-11-02 20:18:41.399 DEBUG 17988 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 20:18:41.399 DEBUG 17988 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 20:18:41.401 DEBUG 17988 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 20:18:41.557 DEBUG 17988 --- [http-nio-8080-exec-4] c.m.m.d.StudentDao.randomViewsGenerator  : ==>  Preparing: update student set views = ?;
+2023-11-02 20:18:41.557 DEBUG 17988 --- [http-nio-8080-exec-4] c.m.m.d.StudentDao.randomViewsGenerator  : ==> Parameters: 19(Integer)
+2023-11-02 20:18:41.559 DEBUG 17988 --- [http-nio-8080-exec-4] c.m.m.d.StudentDao.randomViewsGenerator  : <==    Updates: 5
+2023-11-02 20:18:41.563 DEBUG 17988 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 20:18:41.564 DEBUG 17988 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 20:18:41.565 DEBUG 17988 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 20:18:41.708 DEBUG 17988 --- [http-nio-8080-exec-7] c.m.m.d.StudentDao.randomViewsGenerator  : ==>  Preparing: update student set views = ?;
+2023-11-02 20:18:41.708 DEBUG 17988 --- [http-nio-8080-exec-7] c.m.m.d.StudentDao.randomViewsGenerator  : ==> Parameters: 92(Integer)
+2023-11-02 20:18:41.711 DEBUG 17988 --- [http-nio-8080-exec-7] c.m.m.d.StudentDao.randomViewsGenerator  : <==    Updates: 5
+2023-11-02 20:18:41.715 DEBUG 17988 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 20:18:41.716 DEBUG 17988 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 20:18:41.717 DEBUG 17988 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 20:18:41.966 DEBUG 17988 --- [http-nio-8080-exec-9] c.m.m.d.StudentDao.randomViewsGenerator  : ==>  Preparing: update student set views = ?;
+2023-11-02 20:18:41.967 DEBUG 17988 --- [http-nio-8080-exec-9] c.m.m.d.StudentDao.randomViewsGenerator  : ==> Parameters: 27(Integer)
+2023-11-02 20:18:41.969 DEBUG 17988 --- [http-nio-8080-exec-9] c.m.m.d.StudentDao.randomViewsGenerator  : <==    Updates: 5
+2023-11-02 20:18:41.974 DEBUG 17988 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 20:18:41.975 DEBUG 17988 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 20:18:41.978 DEBUG 17988 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 20:20:25.672 DEBUG 17988 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 20:20:25.673 DEBUG 17988 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 20:20:25.674 DEBUG 17988 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:04:32.507  INFO 17988 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-02 21:04:32.517  INFO 17988 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-02 21:09:05.029  INFO 11816 --- [restartedMain] c.mycom.more.SpringBootMoreApplication   : Starting SpringBootMoreApplication using Java 1.8.0_392 on DESKTOP-PU71GCC with PID 11816 (C:\jongkookE\Spring-Boot\SpringBootMore\build\classes\java\main started by user in C:\jongkookE\Spring-Boot\SpringBootMore)
+2023-11-02 21:09:05.031  INFO 11816 --- [restartedMain] c.mycom.more.SpringBootMoreApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-11-02 21:09:05.094  INFO 11816 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-02 21:09:05.095  INFO 11816 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-02 21:09:06.403  INFO 11816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-02 21:09:06.418  INFO 11816 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-02 21:09:06.418  INFO 11816 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.82]
+2023-11-02 21:09:06.507  INFO 11816 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-02 21:09:06.508  INFO 11816 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1413 ms
+2023-11-02 21:09:07.241  INFO 11816 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-02 21:09:07.284  INFO 11816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-02 21:09:07.293  INFO 11816 --- [restartedMain] c.mycom.more.SpringBootMoreApplication   : Started SpringBootMoreApplication in 2.685 seconds (JVM running for 3.453)
+2023-11-02 21:09:10.922  INFO 11816 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-02 21:09:10.923  INFO 11816 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-02 21:09:10.924  INFO 11816 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-11-02 21:09:11.003  INFO 11816 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-02 21:09:11.355  INFO 11816 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-02 21:09:11.362 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:09:11.385 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:09:11.407 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:10:06.767 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:10:06.768 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:10:06.770 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:10:06.797 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:10:06.797 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:10:06.799 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:10:56.990 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:10:56.990 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:10:56.993 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:12:39.101 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:12:39.102 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:12:39.105 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:12:39.145 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:12:39.145 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:12:39.147 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:12:43.249 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:12:43.250 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:12:43.253 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:12:43.282 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:12:43.282 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:12:43.285 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:15:20.401 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:15:20.402 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:15:20.404 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:15:20.421 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:15:20.422 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:15:20.423 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:15:28.621 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:15:28.622 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:15:28.624 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:15:28.653 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:15:28.653 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:15:28.655 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:16:19.058 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:16:19.059 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:16:19.062 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:16:22.177 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:16:22.178 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 2(Integer)
+2023-11-02 21:16:22.180 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:16:35.970 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:16:35.970 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:16:35.971 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:17:49.241 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:17:49.242 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 3(Integer)
+2023-11-02 21:17:49.244 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:18:00.444 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:18:00.444 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:18:00.446 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:18:00.455 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:18:00.455 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:18:00.456 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:18:06.371 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:18:06.372 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:18:06.374 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:18:07.904 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:18:07.905 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:18:07.906 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:18:56.545 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:18:56.546 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:18:56.547 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:19:01.473 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:19:01.474 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:19:01.475 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:20:04.457 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:20:04.457 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:20:04.459 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:20:41.189 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:20:41.190 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:20:41.191 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:20:48.601 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:20:48.602 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:20:48.603 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:21:11.503 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:21:11.504 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:21:11.505 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:21:16.108 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:21:16.109 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:21:16.110 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:21:45.024 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:21:45.024 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:21:45.026 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:21:50.412 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:21:50.412 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:21:50.414 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:21:55.608 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:21:55.608 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:21:55.610 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:22:05.008 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:22:05.009 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:22:05.011 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:22:55.901 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:22:55.901 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:22:55.903 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:22:57.578 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:22:57.579 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:22:57.580 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:23:20.939 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:23:20.939 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:23:20.940 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:23:22.357 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:23:22.357 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 3(Integer)
+2023-11-02 21:23:22.358 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:23:45.250 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:23:45.251 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:23:45.252 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:23:49.104 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:23:49.105 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:23:49.106 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:24:01.516 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:24:01.516 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:24:01.518 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:24:12.904 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:24:12.905 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:24:12.906 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:25:00.454 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:25:00.455 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:25:00.456 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:25:01.995 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:25:01.995 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:25:01.996 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:25:06.067 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:25:06.068 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 4(Integer)
+2023-11-02 21:25:06.070 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:25:14.001 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:25:14.001 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:25:14.003 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:25:16.268 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:25:16.269 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:25:16.270 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:25:17.820 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:25:17.821 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:25:17.822 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:25:31.862 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:25:31.863 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:25:31.864 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:25:33.266 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:25:33.267 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:25:33.269 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:25:37.993 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:25:37.993 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:25:37.995 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:25:39.517 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:25:39.517 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:25:39.518 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:30:17.543 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:30:17.544 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:30:17.545 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:30:19.726 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:30:19.727 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:30:19.728 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:30:27.449 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:30:27.449 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:30:27.451 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:30:38.024 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:30:38.024 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:30:38.025 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:30:39.466 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:30:39.467 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 4(Integer)
+2023-11-02 21:30:39.468 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:30:41.709 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:30:41.710 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:30:41.710 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:30:48.320 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:30:48.321 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:30:48.323 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:30:50.072 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:30:50.073 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:30:50.074 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:32:36.209 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:32:36.209 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:32:36.210 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:32:38.430 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:32:38.431 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 4(Integer)
+2023-11-02 21:32:38.432 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:34:30.222 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:34:30.223 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:34:30.224 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:34:49.031 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:34:49.031 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:34:49.032 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:35:12.206 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:35:12.207 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:35:12.209 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:35:24.236 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:35:24.236 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:35:24.238 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:36:03.238 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:36:03.239 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:36:03.240 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:36:04.078 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:36:04.079 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:36:04.079 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:36:29.884 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:36:29.884 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:36:29.885 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:36:50.689 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:36:50.690 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:36:50.691 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:36:52.204 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:36:52.205 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:36:52.207 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:36:55.595 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:36:55.596 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:36:55.597 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:37:19.654 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:37:19.654 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:37:19.656 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:38:42.410 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:38:42.411 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:38:42.413 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:40:47.524 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:40:47.524 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:40:47.526 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:42:19.452 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:42:19.453 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:42:19.454 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:43:36.528 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:43:36.528 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:43:36.529 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:43:37.915 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:43:37.915 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:43:37.916 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:43:41.475 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:43:41.476 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:43:41.477 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:43:45.495 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:43:45.495 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:43:45.496 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:43:53.112 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:43:53.113 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:43:53.114 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:43:54.541 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:43:54.541 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:43:54.543 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:44:26.947 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:44:26.948 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:44:26.949 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:44:28.758 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:44:28.758 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:44:28.759 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:44:42.743 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:44:42.744 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:44:42.745 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:44:44.064 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:44:44.065 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:44:44.065 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:45:00.417 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:45:00.417 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:45:00.418 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:45:54.257 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:45:54.258 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:45:54.259 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:45:57.744 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:45:57.744 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:45:57.745 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:45:59.677 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:45:59.677 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 3(Integer)
+2023-11-02 21:45:59.678 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:46:02.128 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:46:02.129 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 4(Integer)
+2023-11-02 21:46:02.130 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:46:05.128 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:46:05.128 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:46:05.129 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:46:17.799 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:46:17.799 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:46:17.800 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:46:22.407 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:46:22.408 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:46:22.409 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:46:40.519 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:46:40.519 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:46:40.520 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:46:46.100 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:46:46.100 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:46:46.102 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:47:08.902 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:47:08.902 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:47:08.904 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:47:39.022 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:47:39.023 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:47:39.024 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:47:39.921 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:47:39.921 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 4(Integer)
+2023-11-02 21:47:39.922 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:47:46.560 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:47:46.560 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:47:46.561 DEBUG 11816 --- [http-nio-8080-exec-8] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:47:47.931 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:47:47.932 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:47:47.933 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:48:19.658 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:48:19.659 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:48:19.660 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:50:48.044 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:50:48.044 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:50:48.045 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:54:10.972 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:54:10.972 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:54:10.973 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:54:13.240 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:54:13.240 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 4(Integer)
+2023-11-02 21:54:13.241 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:54:13.639 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:54:13.639 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 4(Integer)
+2023-11-02 21:54:13.641 DEBUG 11816 --- [http-nio-8080-exec-6] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:54:14.385 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:54:14.386 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:54:14.386 DEBUG 11816 --- [http-nio-8080-exec-7] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+2023-11-02 21:56:15.455 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:56:15.456 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:56:15.457 DEBUG 11816 --- [http-nio-8080-exec-9] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:56:41.825 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:56:41.825 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:56:41.826 DEBUG 11816 --- [http-nio-8080-exec-10] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:56:43.253 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:56:43.254 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:56:43.255 DEBUG 11816 --- [http-nio-8080-exec-1] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:56:45.264 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.insert     : ==>  Preparing: insert into student (student_nm, email, phone) values(?,?,?)
+2023-11-02 21:56:45.266 DEBUG 11816 --- [http-nio-8080-exec-3] com.mycom.more.dao.StudentDao.insert     : ==> Parameters: null, null, null
+2023-11-02 21:56:45.355 ERROR 11816 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'student_nm' cannot be null
+### The error may exist in mappers/student_query.xml
+### The error may involve com.mycom.more.dao.StudentDao.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into student (student_nm, email, phone)   values(?,?,?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'student_nm' cannot be null
+; Column 'student_nm' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'student_nm' cannot be null] with root cause
+
+java.sql.SQLIntegrityConstraintViolationException: Column 'student_nm' cannot be null
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354) ~[mysql-connector-j-8.0.33.jar:8.0.33]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_392]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_392]
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58) ~[mybatis-3.5.13.jar:3.5.13]
+	at com.sun.proxy.$Proxy79.execute(Unknown Source) ~[na:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184) ~[mybatis-3.5.13.jar:3.5.13]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_392]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_392]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_392]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_392]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425) ~[mybatis-spring-2.1.1.jar:2.1.1]
+	at com.sun.proxy.$Proxy68.insert(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272) ~[mybatis-spring-2.1.1.jar:2.1.1]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:142) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.13.jar:3.5.13]
+	at com.sun.proxy.$Proxy69.insert(Unknown Source) ~[na:na]
+	at com.mycom.more.service.StudentServiceImpl.insert(StudentServiceImpl.java:31) ~[main/:na]
+	at com.mycom.more.service.StudentServiceImpl$$FastClassBySpringCGLIB$$f54d726.invoke(<generated>) ~[main/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.30.jar:5.3.30]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792) ~[spring-aop-5.3.30.jar:5.3.30]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.30.jar:5.3.30]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762) ~[spring-aop-5.3.30.jar:5.3.30]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.30.jar:5.3.30]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.30.jar:5.3.30]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.30.jar:5.3.30]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.30.jar:5.3.30]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762) ~[spring-aop-5.3.30.jar:5.3.30]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707) ~[spring-aop-5.3.30.jar:5.3.30]
+	at com.mycom.more.service.StudentServiceImpl$$EnhancerBySpringCGLIB$$168fc303.insert(<generated>) ~[main/:na]
+	at com.mycom.more.controller.StudentController.insert(StudentController.java:37) ~[main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_392]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_392]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_392]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_392]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.30.jar:5.3.30]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.30.jar:5.3.30]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.30.jar:5.3.30]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) ~[tomcat-embed-core-9.0.82.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.30.jar:5.3.30]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.82.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.30.jar:5.3.30]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.30.jar:5.3.30]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.30.jar:5.3.30]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.30.jar:5.3.30]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168) ~[tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.82.jar:9.0.82]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_392]
+
+2023-11-02 21:57:55.704 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:57:55.705 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:57:55.705 DEBUG 11816 --- [http-nio-8080-exec-2] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:57:56.598 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==>  Preparing: select student_id,student_nm, email, phone, views from student
+2023-11-02 21:57:56.599 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : ==> Parameters: 
+2023-11-02 21:57:56.600 DEBUG 11816 --- [http-nio-8080-exec-5] com.mycom.more.dao.StudentDao.list       : <==      Total: 5
+2023-11-02 21:57:57.401 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.detail     : ==>  Preparing: select student_id, student_nm, email, phone, views from student where student_id = ?
+2023-11-02 21:57:57.402 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.detail     : ==> Parameters: 14(Integer)
+2023-11-02 21:57:57.402 DEBUG 11816 --- [http-nio-8080-exec-4] com.mycom.more.dao.StudentDao.detail     : <==      Total: 1
+>>>>>>> Stashed changes
