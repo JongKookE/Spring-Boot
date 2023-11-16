@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mycom.myboard.board.dao.BoardDao">
+	<!-- return이 primitive 타입 이면 별도로 기술할 필요가 없다. (int) -->
+	<!-- 복수개의 파라미터가 필요할 경우  -->
+	<select id="boardList" parameterType="map" resultType="com.mycom.myboard.board.dto.BoardDto" >
+		SELECT b.BOARD_ID, b.USER_SEQ, u.USER_NAME, u.USER_PROFILE_IMAGE_URL, b.TITLE, b.CONTENT, b.REG_DT, b.READ_COUNT
+      FROM BOARD b, USERS u
+     WHERE b.USER_SEQ = u.USER_SEQ
+     ORDER BY b.BOARD_ID DESC
+      LIMIT #{limit} OFFSET #{offset} 
+	</select>
+	
+	<!--  useGeneratedKeys="true" keyProperty="boardId" AutoIncreasement 되는 컬럼에 대해 -->
+	<insert id="boardInsert" parameterType="com.mycom.myboard.board.dto.BoardDto"  useGeneratedKeys="true" keyProperty="boardId">
+    INSERT INTO BOARD ( USER_SEQ, TITLE, CONTENT, REG_DT, READ_COUNT )
+                VALUES ( #{userSeq}, #{title}, #{content}, now(), 0 )
+	</insert>
+
+	<insert id="boardFileInsert" parameterType="com.mycom.myboard.board.dto.BoardFileDto">
+	    INSERT INTO BOARD_FILE ( BOARD_ID, FILE_NAME, FILE_SIZE, FILE_CONTENT_TYPE, FILE_URL )
+	                VALUES ( #{boardId}, #{fileName}, #{fileSize}, #{fileContentType}, #{fileUrl} )
+	</insert>
+</mapper>

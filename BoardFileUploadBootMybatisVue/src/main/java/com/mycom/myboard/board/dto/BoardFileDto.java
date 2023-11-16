@@ -19,6 +19,7 @@ public class BoardFileDto {
 	private String fileName;
 	private long fileSize;
 	private String fileContent;
+	private String fileContentType;
 	private String fileUrl;
 	private LocalDateTime regDt;
 }
